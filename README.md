@@ -32,6 +32,6 @@ To view the web page, simply open the `index.html` file in your web browser.
 
 ## Credits
 
-- This project was created by [Your Name/Nickname].
+- This project was created by Th3Mayar.
 - The Luffy Gear 4 image is owned by [One Piece](https://onepiece.fandom.com/).
 - The audio track used belongs to [SoundCloud](https://soundcloud.com/).
