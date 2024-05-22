@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(255, 255, 255);
+    max-width: 1920px;
+    margin: 0 auto; 
+    overflow-x: hidden;
+}
+
+.img-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 120vh;
+    position: relative;
+}
+
+.img-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-content img:first-child {
+    position: absolute;
+    bottom: 220px;
+    animation: bounce 0.6s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-600px);
+    }
+}
+
+.img-crop {
+    overflow: hidden; 
+    height: 200px;
+}
+
+.img-crop img {
+    display: block;
+    width: 100%;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #770505, #d61818, #000000, #975211, #5c1111);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -1;
+    filter: blur(20px);
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
