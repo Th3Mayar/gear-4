@@ -1,8 +1,8 @@
 const iframe = document.getElementById("soundcloud-player");
 const player = SC.Widget(iframe);
-const img = document.querySelector(".img-content img:first-child");
+const img = document.querySelector(".img-content");
 
-img.addEventListener("animationstart", () => {
+window.addEventListener("load", () => {
   const iframeTag = document.createElement("iframe");
 
   iframeTag.id = "soundcloud-player";
@@ -19,4 +19,13 @@ img.addEventListener("animationstart", () => {
   player.bind(SC.Widget.Events.READY, () => {
     player.play();
   });
+
+  setInterval(refreshPage, 20000);
 });
+
+
+const refreshPage = () => {
+  location.reload();
+}
+
+
